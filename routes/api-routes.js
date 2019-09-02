@@ -22,6 +22,18 @@ module.exports = function (app) {
                 res.status(401).json(err);
             });
     });
+    app.post("/api/postVideo", function (req, res) {
+        db.Videos.create({
+            link: req.body.link
+        })
+            .then(function () {
+                res.send("success");
+            })
+            .catch(function (err) {
+                console.log(err);
+                res.status(401).json(err);
+            });
+    });
     app.post("/api/login", passport.authenticate("local"), function (req, res) {
         res.json(req.user);
     });
@@ -35,6 +47,12 @@ module.exports = function (app) {
             });
         }
     });
+    app.get("/api/getVideos", function (req, res) {
+        db.Videos.find({})
+            .sort({ date: 1 })
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
+    })
     app.get("/logout", function (req, res) {
         req.logout();
         res.redirect("/home");

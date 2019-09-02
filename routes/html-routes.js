@@ -18,6 +18,12 @@ module.exports = function (app) {
   app.get("/buy", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/buy.html"));
   });
+  app.get("/videos", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/videos.html"));
+  });
+  app.get("/addvideos1234", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/addvideos.html"));
+  });
   app.get("*", isAuthenticated, function (req, res) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });

@@ -5,21 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Easy A Texas</title>
+    <link rel="stylesheet" href="https://w3bits.com/wp-content/themes/w/labs.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- 
-	//////////////////////////////////////////////////////
-
-	FREE HTML5 TEMPLATE 
-	DESIGNED & DEVELOPED by FreeHTML5.co
-		
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
-
-	//////////////////////////////////////////////////////
-	 -->
 
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content="" />
@@ -64,7 +51,75 @@
     <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+    <style>
+        .masonry {
+            transition: all .5s ease-in-out;
+            column-gap: 30px;
+            column-fill: initial;
+        }
 
+        .masonry .brick {
+            margin-bottom: 30px;
+            display: inline-block;
+            /* Fix the misalignment of items */
+            vertical-align: top;
+            /* Keep the item on the very top */
+        }
+
+        /* Masonry image effects */
+        .masonry .brick img {
+            transition: all .5s ease-in-out;
+            backface-visibility: hidden;
+            /* Remove Image flickering on hover */
+        }
+
+        .masonry .brick:hover img {
+            opacity: .75;
+        }
+
+        /* Bordered masonry */
+        .masonry.bordered {
+            column-rule: 1px solid #eee;
+            column-gap: 50px;
+        }
+
+        .masonry.bordered .brick {
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Gutterless masonry */
+        .masonry.gutterless {
+            column-gap: 0;
+        }
+
+        .masonry.gutterless .brick {
+            margin-bottom: 0;
+        }
+
+        /* Masonry on tablets */
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+            .masonry {
+                column-count: 2;
+            }
+        }
+
+        /* Masonry on big screens */
+        @media only screen and (min-width: 1024px) {
+            .desc {
+                font-size: 1.25em;
+            }
+
+            .intro {
+                letter-spacing: 1px;
+            }
+
+            .masonry {
+                column-count: 3;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -104,10 +159,9 @@
                                 <li><a href="/home#testimonials">Testimonials</a></li>
                                 <li><a href="/home#parents">Parents</a></li>
                                 <li><a href="/home#plans">Plans</a></li>
-								<!-- <li class="btn-cta"><a href="/register"><span>Log In/Register</span></a></li> -->
-								<li class="btn-cta"><a href="/videos"><span>Watch Videos</span></a></li>
-								<li class="btn-cta"><a href="/reserve"><span>Schedule a Review Session</span></a></li>
-								<li class="btn-cta"><a href="/buy"><span>Buy a Package</span></a></li>
+                                <li class="btn-cta"><a href="/register"><span>Log In/Register</span></a></li>
+                                <li class="btn-cta"><a href="/reserve"><span>Schedule a Review Session</span></a></li>
+                                <li class="btn-cta"><a href="/buy"><span>Buy a Package</span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -119,14 +173,14 @@
             <div class="flexslider">
                 <ul class="slides">
                     <li
-                        style="background-image: url(https://images.unsplash.com/photo-1535982330050-f1c2fb79ff78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80);">
+                        style="background-image: url(https://images.unsplash.com/photo-1516979187457-637abb4f9353?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80);">
                         <div class="overlay-gradient"></div>
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-8 col-md-offset-2 text-center slider-text">
                                     <div class="slider-text-inner">
-                                        <h1 class="heading-section">Log In</h1>
-                                        <h2>Throw Away Your Textbook.</h2>
+                                        <h1 class="heading-section">Watch Videos</h1>
+                                        <h2></h2>
                                     </div>
                                 </div>
                             </div>
@@ -137,90 +191,17 @@
         </aside>
 
         <div id="fh5co-contact">
+                
             <div class="container">
-                <div class="row">
-                    <div class="col-md-5 col-md-push-1 animate-box">
-
-                        <div class="fh5co-contact-info">
-                            <h3>Easy A Texas</h3>
-                            <ul>
-                                <li class="address">ADDRESS HERE</li>
-                                <li class="phone"><a href="tel://1234567920">PHONE NUMBER HERE</a></li>
-                                <li class="email"><a href="mailto:info@yoursite.com">easy.a.calculus@gmail.com</a></li>
-                                <li class="url"><a href="/home">Tutoring Services</a></li>
-                            </ul>
-                        </div>
-
+                <div class="wrapper">
+                    <div class="masonry">
+                        <!-- <div class="brick">
+                                <iframe width="352.2" height="198" src="https://www.youtube.com/embed/WkjbSDQnPBQ" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>                
+                        </div> -->
                     </div>
-                    <div class="col-md-6 animate-box">
-                        <h3>Create your account.</h3>
-                        <form class="signup">
-                            <div class="row form-group">
-                                <div class="col-md-6">
-                                    <!-- <label for="fname">First Name</label> -->
-                                    <input type="text" id="fname" class="form-control" placeholder="Your first name">
-                                </div>
-                                <div class="col-md-6">
-                                    <!-- <label for="lname">Last Name</label> -->
-                                    <input type="text" id="lname" class="form-control" placeholder="Your last name">
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-md-12">
-                                    <!-- <label for="email">Email</label> -->
-                                    <input type="email" id="email" class="form-control"
-                                        placeholder="Your email address">
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-md-12">
-                                    <!-- <label for="email">Email</label> -->
-                                    <input type="password" id="password" class="form-control" placeholder="Password">
-                                </div>
-                            </div>
-                            <!-- <div class="row form-group">
-                                <div class="col-md-12">
-                                    <label for="subject">Subject</label>
-                                    <input type="text" id="subject" class="form-control"
-                                        placeholder="Your subject of this message">
-                                </div>
-                            </div> -->
-                            <!-- <div class="row form-group">
-                                <div class="col-md-12">
-                                    <label for="message">Message</label>
-                                    <textarea name="message" id="message" cols="30" rows="10" class="form-control"
-                                        placeholder="Say something about us"></textarea>
-                                </div>
-                            </div> -->
-                            <div class="form-group">
-                                <input type="submit" value="Create Account" class="btn btn-primary">
-                            </div>
-
-                        </form>
-                        <h3>Already have an account? Log in here.</h3>
-                        <form class="login">
-                            <div class="row form-group">
-                                <div class="col-md-12">
-                                    <!-- <label for="email">Email</label> -->
-                                    <input type="text" id="emailLogin" class="form-control" placeholder="Your email address">
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-md-12">
-                                    <!-- <label for="email">Email</label> -->
-                                    <input type="password" id="passwordLogin" class="form-control"
-                                        placeholder="Your password">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" value="Log In" class="btn btn-primary">
-                            </div>
-
-                        </form>
-                    </div>
-
                 </div>
-
             </div>
         </div>
 
@@ -268,8 +249,9 @@
     <script src="js/simplyCountdown.js"></script>
     <!-- Main -->
     <script src="js/main.js"></script>
-    <script src="-js/login.js"></script>
-    <script src="-js/signup.js"></script>
+    <script src="-js/populate.js"></script>
+    <script src="postVideos.js"></script>
+
     <script>
         var d = new Date(new Date().getTime() + 1000 * 120 * 120 * 2000);
 
