@@ -2,7 +2,7 @@ $(document).ready(function () {
     $.get("/api/getVideos", {})
         .then(function (req, res) {
             console.log(req, res)
-            for (var i = 0; i < 10; i++) {
+            for (var i = 0; i < 12; i++) {
                 $(".masonry").append(`
                 <div class="brick">
                     <iframe width="352.2" height="198" src="https://www.youtube.com/embed/${req[i].link}" frameborder="0"
