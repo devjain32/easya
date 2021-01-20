@@ -278,8 +278,8 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #fh5co-hero {
-  min-height: 630px;
-  height: 630px;
+  min-height: 330px;
+  height: 330px;
   background: #fff url(../images/loader.gif) no-repeat center center;
 }
 #fh5co-hero .btn {
@@ -301,8 +301,8 @@ h1, h2, h3, h4, h5, h6, figure {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
-  min-height: 630px;
-  height: 630px;
+  min-height: 330px;
+  height: 330px;
   position: relative;
 }
 #fh5co-hero .flexslider .slides li:after {
@@ -336,8 +336,8 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-hero .flexslider .slider-text {
   display: table;
   opacity: 0;
-  min-height: 630px;
-  height: 630px;
+  min-height: 330px;
+  height: 330px;
   z-index: 9;
 }
 #fh5co-hero .flexslider .slider-text > .slider-text-inner {
